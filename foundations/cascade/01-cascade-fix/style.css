@@ -8,20 +8,29 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
+/* This section presents one alternatives to fix the small paragraph's issue  by moving .small-para below .para */
+/* We could also add more specificity to .small-para by using the selector .para.small-para and leaving it above .para */
 
 .para {
   font-size: 22px;
 }
 
-.confirm {
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+/* These next two present alternatives to fix the confirm's button
+issues, beating .button by having 2 type selectors, or 1 id selector
+both of which beat 1 type selector */
+.button.confirm {
   background: green;
   color: white;
+}
+
+#confirm-button {
   font-weight: bold;
-} 
+}
 
 .button {
   background-color: rgb(255, 255, 255);
@@ -29,7 +38,8 @@ body {
   font-size: 20px;
 }
 
-.child {
+/* Fixing this one with the descendant operator to add specificity */
+.text .child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
